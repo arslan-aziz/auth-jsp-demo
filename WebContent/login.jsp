@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login Page</title>
 </head>
-<body>
+<body>	
 
+	<%
+		session.setAttribute("form","yes");
+	%>
+	<form action="login" method="get">
+		Enter username : <input type="text" name="uname"><br>
+	</form>
+	<input type="submit">
 </body>
 </html>
