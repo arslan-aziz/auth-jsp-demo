@@ -23,12 +23,22 @@ public class AuthFilter implements Filter{
 		HttpServletResponse httpResp = (HttpServletResponse) response;
 		
 		HttpSession session = httpReq.getSession();
+		String pathInfo = ((HttpServletRequest) request).getServletPath();
+		
+		System.out.println();
+		System.out.println(pathInfo);
+		System.out.println("Hit Filter");
+		System.out.println(session.getAttribute("uname"));
+		
 		
 		if(session.getAttribute("uname") == null) {
 			httpResp.sendRedirect("login");
+			System.out.println("Redirecting to login");
 		}
 		else {
+			System.out.println("filter pass");
 			chain.doFilter(request, response);
+			
 		}
 		
 	}

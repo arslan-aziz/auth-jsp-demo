@@ -8,9 +8,6 @@
 </head>
 <body>	
 
-	<%
-		session.setAttribute("form","yes");
-	%>
 	<form action="login" method="get">
 		Enter username : <input type="text" name="uname"><br>
 	</form>
