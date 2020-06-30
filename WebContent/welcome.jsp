@@ -8,5 +8,7 @@
 </head>
 <body>
 Welcome to the Website.
+<br>
+<input type="button" onclick="location.href='gallery.jsp';" value="Go to Gallery" />
 </body>
 </html>

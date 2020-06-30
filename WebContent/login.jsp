@@ -12,5 +12,7 @@
 		Enter username : <input type="text" name="uname"><br>
 	</form>
 	<input type="submit">
+	
+	
 </body>
 </html>

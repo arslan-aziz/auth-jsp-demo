@@ -37,8 +37,11 @@ public class AuthFilter implements Filter{
 		}
 		else {
 			System.out.println("filter pass");
-			chain.doFilter(request, response);
 			
+			if(pathInfo.equals("/"))
+				httpResp.sendRedirect("welcome.jsp");
+			else
+				chain.doFilter(request, response);
 		}
 		
 	}
